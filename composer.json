@@ -17,9 +17,15 @@
     {
       "type" : "composer",
       "url"  : "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/mrbobbybryant/omg-forms"
     }
   ],
-  "require": {},
+  "require": {
+    "omg-forms": "master"
+  },
   "require-dev": {},
   "autoload": {
     "files": [ "omg-forms-basic.php" ]
