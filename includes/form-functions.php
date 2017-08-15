@@ -12,6 +12,10 @@ function get_form_by_post_id( $post_id ) {
 function get_form_values( $slug, $post ) {
 	$fields = Core\get_fields( $slug );
 
+	if ( empty( $fields ) || ! is_array( $fields ) ) {
+		return false;
+	}
+
 	return array_reduce( $fields, function( $acc, $field ) use( $post ) {
 		$key = sprintf( 'omg-forms-%s', $field[ 'slug' ] );
 		$value = get_post_meta( $post->ID, $key, true );
