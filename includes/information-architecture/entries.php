@@ -30,10 +30,7 @@ function register_entries_cpt() {
 		),
 		'supports' => array(
 			'title',
-		),
-		'show_in_rest'          => true,
-		'rest_base'             => 'entries',
-		'rest_controller_class' => '\OMGForms\API\OMG_Entries_Controller'
+		)
 	);
 
 	register_post_type( get_type_entries(), $args );

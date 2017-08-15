@@ -4,6 +4,10 @@ namespace OMGForms\Basic\API;
 use OMGForms\Basic\IA;
 
 function save_form_submission_as_entries( $data, $form ) {
+	if ( 'basic-form' !== $form['form_type'] ) {
+		return false;
+	}
+
 	$form_name = \OMGForms\Helpers\get_form_name( $form['name'] );
 	$entry_id = wp_insert_post( [
 		'post_title' => sprintf( '%s: Temp', $form_name ),

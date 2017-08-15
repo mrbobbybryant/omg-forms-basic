@@ -11,9 +11,12 @@ if ( !defined( 'OMG_FORMS_BASIC_FILE' ) ) {
 require_once OMG_FORMS_BASICS_DIR . '/includes/core.php';
 require_once OMG_FORMS_BASICS_DIR . '/includes/api.php';
 require_once OMG_FORMS_BASICS_DIR . '/includes/information-architecture/index.php';
+require_once OMG_FORMS_BASICS_DIR . '/includes/admin/metabox.php';
+require_once OMG_FORMS_BASICS_DIR . '/includes/form-functions.php';
 
 \OMGForms\Basic\IA\setup();
 \OMGForms\Basic\Core\setup();
+\OMGForms\Basic\Metabox\setup();
 
 function install() {
 	\OMGForms\Basic\IA\register_entries_cpt();
