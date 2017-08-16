@@ -24,7 +24,7 @@
     }
   ],
   "require": {
-    "omg-forms": "master"
+    "omg-forms": "dev-master"
   },
   "require-dev": {},
   "autoload": {
