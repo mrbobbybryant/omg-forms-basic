@@ -3,9 +3,9 @@ namespace OMGForms\Basic\API;
 
 use OMGForms\Basic\IA;
 
-function save_form_submission_as_entries( $data, $form ) {
+function save_form_submission_as_entries( $result, $data, $form ) {
 	if ( 'basic-form' !== $form['form_type'] ) {
-		return false;
+		return $result;
 	}
 
 	$form_name = \OMGForms\Helpers\get_form_name( $form['name'] );
@@ -16,7 +16,8 @@ function save_form_submission_as_entries( $data, $form ) {
 	], true );
 
 	if ( is_wp_error( $entry_id ) ) {
-		return $entry_id;
+		$result = $entry_id;
+		return $result;
 	}
 
 	/**
@@ -30,9 +31,12 @@ function save_form_submission_as_entries( $data, $form ) {
 	if ( isset( $form[ 'email' ] ) && ! empty( $form[ 'email' ] ) ) {
 		send_email( $form, $entry_id );
 	}
+
+	return $result;
+
 }
 
-add_action( 'omg_forms_save_data', __NAMESPACE__ .  '\save_form_submission_as_entries', 10, 2 );
+add_action( 'omg_forms_save_data', __NAMESPACE__ .  '\save_form_submission_as_entries', 10, 3 );
 
 function save_field_data( $entry_id , $data ) {
 	foreach( $data as $key => $value ) {
