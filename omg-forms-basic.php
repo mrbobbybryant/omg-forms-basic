@@ -8,6 +8,10 @@ if ( !defined( 'OMG_FORMS_BASIC_FILE' ) ) {
 	define( 'OMG_FORMS_BASIC_FILE', __FILE__ );
 }
 
+if ( !defined( 'OMG_FORMS_BASIC_VERSION' ) ) {
+	define( 'OMG_FORMS_BASCI_VERSION', '0.2.0' );
+}
+
 require_once OMG_FORMS_BASICS_DIR . '/includes/core.php';
 require_once OMG_FORMS_BASICS_DIR . '/includes/api.php';
 require_once OMG_FORMS_BASICS_DIR . '/includes/information-architecture/index.php';

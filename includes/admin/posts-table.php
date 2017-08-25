@@ -71,7 +71,7 @@ function register_csv_export_actions( $bulk_actions ) {
     if ( ! isset( $_GET[ 'form_id' ] ) ) {
         return $bulk_actions;
     }
-    
+
 	$bulk_actions[ 'export_omg_forms' ] = esc_html__( 'Export Entries', 'omg-forms' );
 
 	return $bulk_actions;
