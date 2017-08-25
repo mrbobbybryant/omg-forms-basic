@@ -28,7 +28,23 @@ function entries_meta_box_display( $post ) {
 	foreach( $values as $key => $value ) { ?>
 		<p>
 			<strong><?php echo esc_html( sprintf( '%s: ', $key ) ); ?></strong>
-			<?php echo esc_html( $value ); ?>
+			<?php echo display_values( $value ); ?>
 		</p>
 	<?php }
+}
+
+function display_values( $value ) {
+    if ( is_array( $value ) ) {
+        ob_start();?>
+
+        <ul>
+            <?php foreach( $value as $item ) : ?>
+                <li><?php echo esc_html( $item ); ?></li>
+            <?php endforeach; ?>
+        </ul>
+
+        <?php return ob_get_clean();
+    } else {
+        echo esc_html( $value );
+    }
 }
