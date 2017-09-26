@@ -17,14 +17,10 @@
     {
       "type" : "composer",
       "url"  : "https://wpackagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/mrbobbybryant/omg-forms"
     }
   ],
   "require": {
-    "omg-forms": "dev-master"
+    "developwithwp/omg-forms": "dev-master"
   },
   "require-dev": {},
   "autoload": {

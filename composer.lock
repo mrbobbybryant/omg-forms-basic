@@ -1,0 +1,48 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "cb3549bf1489d2df64803198693a2413",
+    "packages": [
+        {
+            "name": "developwithwp/omg-forms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrbobbybryant/omg-forms.git",
+                "reference": "fd9aa3cbdbe0aa75f94e4c716ef035032561b754"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrbobbybryant/omg-forms/zipball/fd9aa3cbdbe0aa75f94e4c716ef035032561b754",
+                "reference": "fd9aa3cbdbe0aa75f94e4c716ef035032561b754",
+                "shasum": ""
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "omg-forms.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A WordPress Forms library built for developers.",
+            "homepage": "https://github.com/mrbobbybryant/omg-forms",
+            "time": "2017-09-26T17:51:06+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "developwithwp/omg-forms": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
