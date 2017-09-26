@@ -20,7 +20,7 @@
     }
   ],
   "require": {
-    "developwithwp/omg-forms": "dev-master"
+    "developwithwp/omg-forms": "0.5.*"
   },
   "require-dev": {},
   "autoload": {

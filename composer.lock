@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb3549bf1489d2df64803198693a2413",
+    "content-hash": "a2a63f26e794f9a800e80e4db725e3c2",
     "packages": [
         {
             "name": "developwithwp/omg-forms",
-            "version": "dev-master",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mrbobbybryant/omg-forms.git",
@@ -38,9 +38,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "developwithwp/omg-forms": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
