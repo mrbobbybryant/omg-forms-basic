@@ -1,10 +1,10 @@
 {
-  "name": "omg-forms-basic",
+  "name": "developwithwp/omg-forms-basic",
   "description": "An OMG Forms addon, which adds basic form support.",
-  "version": "0.1.0",
-  "type": "library",
+  "version": "0.2.0",
+  "type": "package",
   "keywords": [],
-  "homepage": "https://github.com/mrbobbybryant/omg-forms",
+  "homepage": "https://github.com/mrbobbybryant/omg-forms-basic",
   "license": "GPL-2.0+",
   "author": {
     "name": "Bobby Bryant",
