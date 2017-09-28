@@ -2,7 +2,7 @@
   "name": "omf-forms-basic",
   "title": "OMG Forms Basic Addon",
   "description": "An OMG Forms addon, which adds basic form support.",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/mrbobbybryant/omg-forms",
   "scripts": {
     "start": "webpack --config webpack.config.js",
@@ -15,7 +15,7 @@
   },
   "author": {
     "name": "Bobby Bryant",
-    "email": "bbryant@wpcreative.agency",
+    "email": "bobby@developwithwp.com",
     "url": "http://developwithwp.com"
   },
   "devDependencies": {
