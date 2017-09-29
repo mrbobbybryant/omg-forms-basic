@@ -2,7 +2,6 @@
   "name": "omf-forms-basic",
   "title": "OMG Forms Basic Addon",
   "description": "An OMG Forms addon, which adds basic form support.",
-  "version": "0.1.0",
   "homepage": "https://github.com/mrbobbybryant/omg-forms",
   "scripts": {
     "start": "webpack --config webpack.config.js",
