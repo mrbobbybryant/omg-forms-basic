@@ -9,7 +9,7 @@ if ( !defined( 'OMG_FORMS_BASIC_FILE' ) ) {
 }
 
 if ( !defined( 'OMG_FORMS_BASIC_VERSION' ) ) {
-	define( 'OMG_FORMS_BASIC_VERSION', '0.3.0' );
+	define( 'OMG_FORMS_BASIC_VERSION', '0.3.1' );
 }
 
 require_once OMG_FORMS_BASICS_DIR . '/includes/core.php';
@@ -52,7 +52,10 @@ function create_associated_tax_term( $slug, $args ) {
 add_action( 'omg_forms_create_form', 'create_associated_tax_term', 10, 2 );
 
 function forms_create_rest_submission( $args ) {
-	$args[ 'rest_api' ] = true;
+	if ( 'basic-form' === $args['form_type'] ) {
+		$args[ 'rest_api' ] = true;
+	}
+
 	return $args;
 }
 add_filter( 'omg_form_filter_register_args', 'forms_create_rest_submission' );
