@@ -25,7 +25,11 @@ function get_form_values( $slug, $post, $print_values = false ) {
 			$value = implode( ',', $value );
 		}
 
-		$acc[ $field[ 'label' ] ] = $value;
+		if ( isset( $field[ 'label' ] ) ) {
+			$acc[ $field[ 'label' ] ] = $value;
+		} else {
+			$acc[ $field[ 'slug' ] ] = $value;
+		}
 
 		return $acc;
 	}, [] );
