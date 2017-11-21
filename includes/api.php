@@ -39,7 +39,7 @@ function save_form_submission_as_entries( $data, $form ) {
 
 }
 
-add_action( 'omg_forms_save_data', __NAMESPACE__ .  '\save_form_submission_as_entries', 10, 3 );
+add_action( 'omg_forms_save_data', __NAMESPACE__ .  '\save_form_submission_as_entries', 99, 2 );
 
 function save_field_data( $entry_id , $data ) {
 	foreach( $data as $key => $value ) {

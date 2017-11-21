@@ -25,6 +25,8 @@ function entries_meta_box_display( $post ) {
 		return false;
 	}
 
+	$values = apply_filters( 'omg_forms_basic_metabox_values', $values, $form, $post->ID );
+
 	foreach( $values as $key => $value ) { ?>
 		<p>
 			<strong><?php echo esc_html( sprintf( '%s: ', $key ) ); ?></strong>
