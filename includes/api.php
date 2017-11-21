@@ -2,13 +2,15 @@
 namespace OMGForms\Basic\API;
 
 use OMGForms\Basic\IA;
+use OMGForms\Helpers as CoreHelpers;
 
-function save_form_submission_as_entries( $result, $data, $form ) {
-	if ( 'basic-form' !== $form['form_type'] ) {
-		return $result;
+function save_form_submission_as_entries( $data, $form ) {
+	if ( ! CoreHelpers\is_form_type( 'basic-form', $form ) || is_wp_error( $data ) ) {
+		return $data;
 	}
 
 	$form_name = \OMGForms\Helpers\get_form_name( $form['name'] );
+
 	$entry_id = wp_insert_post( [
 		'post_title' => sprintf( '%s: Temp', $form_name ),
 		'post_status' => 'publish',
@@ -16,14 +18,15 @@ function save_form_submission_as_entries( $result, $data, $form ) {
 	], true );
 
 	if ( is_wp_error( $entry_id ) ) {
-		$result = $entry_id;
-		return $result;
+		$data = $entry_id;
+		return $data;
 	}
 
 	/**
 	 * Update entry title to be a concatenation of Form Name and Entry post_id
 	 */
-	wp_update_post( [ 'ID' => $entry_id, 'post_title' => sprintf( '%s: %d', $form_name, $entry_id ) ] );
+	$post_title = apply_filters( 'omg_forms_basic_entry_title', sprintf( '%s: %d', $form_name, $entry_id ), $data, $form );
+	wp_update_post( [ 'ID' => $entry_id, 'post_title' => $post_title ] );
 
 	save_field_data( $entry_id, $data );
 	set_form_relationship( $entry_id, $form );
@@ -32,7 +35,7 @@ function save_form_submission_as_entries( $result, $data, $form ) {
 		send_email( $form, $entry_id );
 	}
 
-	return $result;
+	return $data;
 
 }
 
