@@ -9,7 +9,7 @@ if ( !defined( 'OMG_FORMS_BASIC_FILE' ) ) {
 }
 
 if ( !defined( 'OMG_FORMS_BASIC_VERSION' ) ) {
-	define( 'OMG_FORMS_BASIC_VERSION', '0.4.2' );
+	define( 'OMG_FORMS_BASIC_VERSION', '0.4.3' );
 }
 
 require_once OMG_FORMS_BASICS_DIR . '/includes/core.php';
