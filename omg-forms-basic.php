@@ -1,15 +1,15 @@
 <?php
 
-if ( !defined( 'OMG_FORMS_BASICS_DIR' ) ) {
+if ( ! defined( 'OMG_FORMS_BASICS_DIR' ) ) {
 	define( 'OMG_FORMS_BASICS_DIR', dirname( __FILE__ ) );
 }
 
-if ( !defined( 'OMG_FORMS_BASIC_FILE' ) ) {
+if ( ! defined( 'OMG_FORMS_BASIC_FILE' ) ) {
 	define( 'OMG_FORMS_BASIC_FILE', __FILE__ );
 }
 
-if ( !defined( 'OMG_FORMS_BASIC_VERSION' ) ) {
-	define( 'OMG_FORMS_BASIC_VERSION', '0.4.3' );
+if ( ! defined( 'OMG_FORMS_BASIC_VERSION' ) ) {
+	define( 'OMG_FORMS_BASIC_VERSION', '0.4.4' );
 }
 
 require_once OMG_FORMS_BASICS_DIR . '/includes/core.php';

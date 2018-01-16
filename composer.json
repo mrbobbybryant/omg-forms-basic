@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "developwithwp/omg-forms": "v0.7.0-beta3"
+    "developwithwp/omg-forms": "v0.7.0-beta4"
   },
   "require-dev": {},
   "autoload": {
